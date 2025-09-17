@@ -9,7 +9,7 @@ const SAUserDetails = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/system-admin/users/${id}`, {
+      const res = await axios.get(`https://store-rating-app-hbvh.onrender.com/api/system-admin/users/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
       });
       setUser(res.data);

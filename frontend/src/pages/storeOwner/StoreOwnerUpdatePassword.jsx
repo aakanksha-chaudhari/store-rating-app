@@ -9,7 +9,7 @@ const StoreOwnerUpdatePassword = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/store-owner/update-password/${user._id}`, {
+      await axios.put(`https://store-rating-app-hbvh.onrender.com/api/store-owner/update-password/${user._id}`, {
         currentPassword,
         newPassword
       });

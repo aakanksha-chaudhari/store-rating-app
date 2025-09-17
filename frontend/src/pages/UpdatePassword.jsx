@@ -13,7 +13,7 @@ const UpdatePassword = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        "http://localhost:5000/api/auth/update-password",
+        "https://store-rating-app-hbvh.onrender.com/api/auth/update-password",
         { oldPassword, newPassword, email: user.email },
         {
           headers: {

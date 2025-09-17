@@ -10,7 +10,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/users/login", { email, password });
+      const res = await axios.post("https://store-rating-app-hbvh.onrender.com/api/users/login", { email, password });
       localStorage.setItem("role", 1);
       alert("User login success");
       navigate("/user-dashboard");

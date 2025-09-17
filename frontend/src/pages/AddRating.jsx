@@ -9,7 +9,7 @@ const AddRating = () => {
   useEffect(() => {
     const fetchStores = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/system-admin/stores");
+        const res = await axios.get("https://store-rating-app-hbvh.onrender.com/api/system-admin/stores");
         setStores(res.data);
       } catch (err) {
         console.error(err);
@@ -24,7 +24,7 @@ const AddRating = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/ratings/add", form);
+      const res = await axios.post("https://store-rating-app-hbvh.onrender.com/api/ratings/add", form);
       setMsg(res.data.message);
       setForm({ store_id: "", user_name: "", rating: "", comment: "" });
     } catch (err) {

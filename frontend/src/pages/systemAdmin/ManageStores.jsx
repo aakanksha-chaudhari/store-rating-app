@@ -7,7 +7,7 @@ const ManageStores = () => {
 
   const fetchStores = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/system-admin/stores");
+      const res = await axios.get("https://store-rating-app-hbvh.onrender.com/api/system-admin/stores");
       setStores(res.data);
     } catch (err) {
       console.error(err);

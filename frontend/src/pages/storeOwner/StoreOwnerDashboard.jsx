@@ -13,7 +13,7 @@ const StoreOwnerDashboard = () => {
   // Fetch dashboard data
   const fetchData = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/store-owner/dashboard/${ownerId}`);
+      const res = await axios.get(`https://store-rating-app-hbvh.onrender.com/api/store-owner/dashboard/${ownerId}`);
       setStoreName(res.data.storeName);
       setRatings(res.data.ratings);
       setAvgRating(res.data.avgRating);
@@ -31,7 +31,7 @@ const StoreOwnerDashboard = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/store-owner/update-password/${ownerId}`,
+        `https://store-rating-app-hbvh.onrender.com/api/store-owner/update-password/${ownerId}`,
         passwords
       );
       setMessage(res.data.message);

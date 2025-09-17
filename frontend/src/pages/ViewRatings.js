@@ -5,7 +5,7 @@ function ViewRatings() {
   const [ratings, setRatings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/ratings")
+    fetch("https://store-rating-app-hbvh.onrender.com/api/ratings")
       .then((res) => res.json())
       .then((data) => setRatings(data))
       .catch((err) => console.error("Error fetching ratings:", err));

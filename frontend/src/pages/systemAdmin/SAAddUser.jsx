@@ -6,7 +6,7 @@ const SAAddUser = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/system-admin/users", form);
+    await axios.post("https://store-rating-app-hbvh.onrender.com/api/system-admin/users", form);
     alert("User added");
   };
 

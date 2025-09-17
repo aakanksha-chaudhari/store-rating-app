@@ -17,7 +17,7 @@ const AddUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/system-admin/users", form);
+      await axios.post("https://store-rating-app-hbvh.onrender.com/api/system-admin/users", form);
       setMsg("User added successfully!");
       setForm({ name: "", email: "", password: "", address: "", role: "user" });
     } catch (err) {

@@ -10,7 +10,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", { password });
+      const res = await axios.post("https://store-rating-app-hbvh.onrender.com/api/admin/login", { password });
       if (res.data.success) {
         localStorage.setItem("user", JSON.stringify(res.data.admin));
         navigate("/storeOwner/StoreOwnerDashboard");

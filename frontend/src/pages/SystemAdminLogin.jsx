@@ -10,7 +10,7 @@ const SystemAdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/system-admin/login", { password });
+      const res = await axios.post("https://store-rating-app-hbvh.onrender.com/api/system-admin/login", { password });
       if (res.data.success) {
         localStorage.setItem("systemAdmin", JSON.stringify(res.data.systemAdmin));
         navigate("/system-admin/dashboard");

@@ -11,7 +11,7 @@ export default function Stores() {
   useEffect(() => {
     const fetchStores = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/stores", {
+        const res = await axios.get("https://store-rating-app-hbvh.onrender.com/api/stores", {
           params: { userId },
         });
         setStores(res.data);
@@ -37,7 +37,7 @@ export default function Stores() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/stores/rate", {
+      await axios.post("https://store-rating-app-hbvh.onrender.com/api/stores/rate", {
         user_id: userId,
         store_id: storeId,
         rating,

@@ -16,7 +16,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", form);
+      const res = await axios.post("https://store-rating-app-hbvh.onrender.com/api/users/register", form);
       console.log(res.data);
       alert("Registered successfully");
     } catch (err) {
